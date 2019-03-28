@@ -1,0 +1,15 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.filter {
+  margin-right: 15px;
+}
+
+mat-form-field {
+  margin-right: 20px;
+}
+
+.alert {
+  color: red;
+}

@@ -1,0 +1,19 @@
+<h1>TODO-List</h1>
+
+<button color="primary" mat-flat-button (click)="getTodos()">Get Todos</button>
+<br />
+<mat-checkbox class="filter">Show only undone tasks</mat-checkbox>
+<mat-checkbox class="filter">Show only my tasks</mat-checkbox>
+<br />
+<mat-form-field>
+  <input matInput placeholder="New Item" name="name" [(ngModel)]="newItemDesc">
+</mat-form-field>
+<mat-form-field>
+  <mat-select placeholder="Assign to">
+    <mat-option *ngFor="let person of people" value="{{ person.name }}">{{ person.name }}</mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-stroked-button (click)="addItem()" [ngClass]="{alert: !newItemDesc}">Add Item</button>
+<br />
+
+{{ todos }}
